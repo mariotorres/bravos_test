@@ -12,7 +12,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-# You can use also:
+# You can also use:
 ```console
 flask run --port=8000
 ```
@@ -37,7 +37,7 @@ Please edit .env if you want to set API_URL with a custom value. Example:
 VITE_API_URL=http://localhost:5000
 ```
 
-## run frontend on a local environment 
+## Run frontend on a local environment 
 ```console
 npm run dev
 ```
