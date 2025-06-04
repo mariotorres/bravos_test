@@ -18,13 +18,13 @@ def handle_request(url):
         json_data = json.loads(data)
         return json_data
 
-@app.route("/")
+@app.route("/", methods=["GET"])
 def hello_world():
     return {
         "bravos_backend": "v0.1"
     }
 
-@app.route("/breeds")
+@app.route("/breeds", methods=["GET"])
 def breeds():
     page = request.args.get('page', 1, type=int)
     page = page if page >= 1 else 1
@@ -35,7 +35,7 @@ def breeds():
         print("Something went wrong", e)
         return {"error": f"Something went wrong {e}"}
 
-@app.route("/breeds/<breed_id>")
+@app.route("/breeds/<breed_id>", methods=["GET"])
 def breed(breed_id):
     try:
         url = f"{API_URL}/breeds/{breed_id}"
@@ -44,7 +44,7 @@ def breed(breed_id):
         print("Something went wrong", e)
         return {"error": f"Something went wrong {e}"}
 
-@app.route("/facts")
+@app.route("/facts", methods=["GET"])
 def facts():
     try:
         url = f"{API_URL}/facts"
@@ -53,7 +53,7 @@ def facts():
         print("Something went wrong", e)
         return {"error": f"Something went wrong {e}"}
 
-@app.route("/groups")
+@app.route("/groups", methods=["GET"])
 def groups():
     try:
         url = f"{API_URL}/groups"
@@ -62,7 +62,7 @@ def groups():
         print("Something went wrong", e)
         return {"error": f"Something went wrong {e}"}
 
-@app.route("/groups/<group_id>")
+@app.route("/groups/<group_id>", methods=["GET"])
 def group(group_id):
     try:
         url = f"{API_URL}/groups/{group_id}"
@@ -71,7 +71,7 @@ def group(group_id):
         print("Something went wrong", e)
         return {"error": f"Something went wrong {e}"}
 
-@app.route("/group-details/<group_id>")
+@app.route("/group-details/<group_id>", methods=["GET"])
 def groups_details(group_id):
     # response = {}
     try:
@@ -94,7 +94,7 @@ def groups_details(group_id):
         print("Something went wrong", e)
         return {"error": f"Something went wrong {e}"}
 
-@app.route("/group-details/<group_id>/breed/<breed_id>")
+@app.route("/group-details/<group_id>/breed/<breed_id>", methods=["GET"])
 def groups_details_breed(group_id, breed_id):
     try:
         group_url = f"{API_URL}/groups/{group_id}"
