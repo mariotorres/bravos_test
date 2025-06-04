@@ -20,26 +20,3 @@ Note: I'm using and MacOS. Port 5000 is used by another program.
 If you're using MacOS, you can either identify and stop that program, or start the server with a different port.
 On macOS, try disabling the 'AirPlay Receiver' service from System Preferences -> General -> AirDrop & Handoff.
 
-# REACT FRONTEND
-```console
-cd bravos_frontend/
-```
-
-## Install dependencies
-```console 
-npm install
-```
-
-## Set backend address (optional)
-Please edit .env if you want to set API_URL with a custom value. Example:
-```console 
-VITE_API_URL=http://localhost:5000
-```
-
-## run frontend on a local environment 
-```console
-npm run dev
-```
-
-Frontend will be available at:
-http://localhost:5173

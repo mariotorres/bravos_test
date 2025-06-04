@@ -1,3 +1,27 @@
+# REACT FRONTEND
+```console
+cd bravos_frontend/
+```
+
+## Install dependencies
+```console 
+npm install
+```
+
+## Set backend address (optional)
+Please edit .env if you want to set API_URL with a custom value. Example:
+```console 
+VITE_API_URL=http://localhost:5000
+```
+
+## Run frontend on a local environment
+```console
+npm run dev
+```
+
+Frontend will be available at:
+http://localhost:5173
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
